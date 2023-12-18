@@ -37,9 +37,14 @@
   font-size: 20px;
 }
 
+.blind {
+  display: none;
+}
+
 #jumbotron {
   height: 100vh;
   position: relative;
+  overflow-y: hidden;
 }
 #jumbotron .sgv-container {
   position: relative;
@@ -154,8 +159,8 @@
   }
 }
 #jumbotron .sgv-container .main-ani5 {
-  top: 0;
-  left: 840px;
+  top: 15px;
+  left: 800px;
   width: 100px;
   animation: rotation5 3s infinite linear;
   transform-origin: center;
@@ -322,29 +327,29 @@
 }
 #jumbotron .main-txt-wrap .img-text-1 {
   position: absolute;
-  top: 14rem;
+  top: 11rem;
   left: 50%;
   transform: translateX(-180%);
-  z-index: 1;
+  z-index: 20;
   font-size: 3.4vw;
   font-weight: 800;
   letter-spacing: -5px;
 }
 #jumbotron .main-txt-wrap .img-text-2 {
   position: absolute;
-  top: 290px;
+  top: calc(50% + 235px);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 30;
   font-size: 8.417vw;
   font-weight: 900;
 }
 #jumbotron .main-txt-wrap .img-text-3 {
   position: absolute;
-  top: 295px;
+  top: calc(50% + 240px);
   left: 50%;
   transform: translateX(-49%);
-  z-index: 1;
+  z-index: 20;
   font-size: 8.417vw;
   font-weight: 900;
   color: #00c1cc;
@@ -405,8 +410,7 @@
 
 #main {
   position: relative;
-  overflow: hidden;
-  height: 644vh;
+  height: 100%;
 }
 #main .inner {
   position: absolute;
@@ -1237,7 +1241,7 @@
 #main #gallery .sec-photo .youtube-txt {
   display: flex;
   justify-content: center;
-  margin: 100px;
+  margin: 100px 100px 0;
 }
 #main #gallery .sec-photo .more-btn {
   position: relative;
@@ -1349,7 +1353,6 @@
   stroke: #000;
 }
 #main #community {
-  height: 100%;
   color: #000;
   background: #f4f9fb;
   z-index: 1;
@@ -1402,7 +1405,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 100px;
-  max-width: 1200px;
   width: 100%;
 }
 #main #community .card-lst {
